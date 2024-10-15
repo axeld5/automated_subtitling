@@ -13,18 +13,23 @@ Here are the different components of the project:
 # Setup
 
 Create yourself a config.yaml file with your openai api key.
+
 Have the openai api key noted as OPENAI_API_KEY.
+
 Only three libraries are required : openai, pyyaml and moviepy.
 
 # Image Magick and Ffmpeg
 
 You also need to install Image Magick within your system for the process to work.
+
 A link that can be useful: http://www.imagemagick.org/script/binary-releases.php
+
 You also need ffmpeg which can be found here: https://ffmpeg.org/download.html
 
 # Subtitling a video
 
 To subtitle a video after all previous steps are down, have a script.txt file and a video.mp4 file.
+
 Then launch the subtitling notebook, and the magic should happen.
 
 # Results
