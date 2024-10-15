@@ -1,4 +1,5 @@
 {
+    "WORDS_PER_LINE": 4,
     "TEXT" : {
         "font":"Comic-Sans-MS-Bold-Italic", 
         "fontsize":50, 

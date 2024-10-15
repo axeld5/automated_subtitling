@@ -38,7 +38,9 @@ To modify subtitle size, color, text, and position, modify the subtitle_config.j
 
 To get what fonts and colors are available, use the cell made for it in the subtitling_notebook.
 
-
+Words per line is for the generation process. Adapt it to the type of video:
+- Tiktok-like: Should be around 4 words per timestamp block
+- Short movie: Can be around 8-10 words per timestamp block
 
 # Results
 

@@ -1,10 +1,16 @@
 import re 
+import json
 import yaml
 from openai import OpenAI
 
 def read_config(config_path: str) -> dict:
     with open(config_path, 'r') as file:
         config = yaml.safe_load(file)
+    return config
+
+def read_subtitle_config(config_path: str) -> dict:
+    with open(config_path, 'r') as file:
+        config = json.load(file)
     return config
 
 config = read_config('config.yaml')
@@ -27,10 +33,12 @@ def transcribe_video(video_path:str) -> str:
     return transcript
 
 def create_timestamping_prompt(script:str, transcript:str) -> str:
+    subtitle_config = read_subtitle_config('subtitle_config.json')
+    words_per_line = subtitle_config['WORDS_PER_LINE']
     timestamping_prompt = f"""You are being given this whisper output, which is the transcript of a video.
     Here is the script of this video: <script> {script} </script>
     Here is the whisper transcript: <transcript> {transcript.words} </transcript>
-    Output in format: "(timestamp) - (group of words)" using the lines of the script, splitting into chunks of at most 4 words like I was subtitling the video.
+    Output in format: "(timestamp) - (group of words)" using the lines of the script, splitting into chunks of at most {words_per_line} words like I was subtitling the video.
     Output your timestamping answer between <output> and </output> tags.
     Output:"""
     return timestamping_prompt
