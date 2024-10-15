@@ -1,0 +1,6 @@
+.env
+*.yaml
+*.mp4
+*.srt
+script.txt
+__pycache__
