@@ -1,0 +1,13 @@
+{
+    "TEXT" : {
+        "font":"Comic-Sans-MS-Bold-Italic", 
+        "fontsize":50, 
+        "color":"yellow",
+        "stroke_color":"black", 
+        "stroke_width":2
+    },
+    "POSITION" : {
+        "x": "center",
+        "y": 0.7
+    }
+}

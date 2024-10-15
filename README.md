@@ -32,6 +32,14 @@ To subtitle a video after all previous steps are down, have a script.txt file an
 
 Then launch the subtitling notebook, and the magic should happen.
 
+# Modify subtitle shape
+
+To modify subtitle size, color, text, and position, modify the subtitle_config.json file.
+
+To get what fonts and colors are available, use the cell made for it in the subtitling_notebook.
+
+
+
 # Results
 
 This process has been tested on a 2:30 min video with success. No guarantee for beyond 5 minutes.
